@@ -82,6 +82,8 @@ def list_form():
     clubs = Club.query.all();
     return render_template('list.html', clubs=clubs)
 
+def getApp():
+    return app
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
