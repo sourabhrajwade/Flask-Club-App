@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="jumbotron">
+    <h1>Add New Club</h1>
+    <h4>Create a new Club</h4>
+    <form method="POST"  style="margin: 20px auto;" style="width: 400px;height: 400px;" class="form-group p-2">
+        {{form.hidden_tag()}}
+        {{form.name.label}}{{form.name(class="form-control p-2")}}
+        {{form.description.label}}{{form.description(class="form-control p-2")}}
+        {{form.categories.label}}{{form.categories(class="form-control p-2")}}
+        {{form.submit(class="btn btn-success p-2 m-4")}}
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% block content %}
+<div class="jumbotron" style="width: 60vw;height: 100vh;">
+  <h1>All Clubs</h1>
+  <h4>View and Manage current clubs</h4>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Categories</th>
+        <th scope="col">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for club in clubs %}
+      <tr>       
+        <th scope="row">{{club.id}}</th>
+        <td>{{club.name}}</td>
+        <td>{{club.categories}}</td>
+        <td>{{club.description}}</td>   
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}
